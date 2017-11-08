@@ -11,7 +11,6 @@ import java.util.List;
 
 /**
  * author:mjh
- *
  */
 @RestController
 @RequestMapping("/user")
@@ -21,16 +20,6 @@ public class UserController {
 
     @Autowired
     private UserRepository userRepository;
-
-    @GetMapping(value = "/hello")
-    public User hello(){
-        User user = new User();
-        user.setName("ccc");
-        user.setPassword("ccc");
-        User user1 = userRepository.save(user);
-        logger.debug("username is {}",user.getName());
-        return user1;
-    }
 
     @GetMapping(value = "/all")
     public List<User> getAllUsers(){
