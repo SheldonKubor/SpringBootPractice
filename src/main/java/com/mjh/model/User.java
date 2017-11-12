@@ -1,36 +1,25 @@
 package com.mjh.model;
 
-
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@javax.persistence.Entity
+/**
+ * @author constantine on 2017/11/11
+ */
+@Entity
 public class User {
-
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
     private String name;
     private String password;
 
-    public User(){
-
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
-
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
